@@ -1,0 +1,79 @@
+/* 
+Filename: Data_Race_08.c
+*/
+/*
+ * @description
+ * Two variables borrow the same variable and at least one writing 
+ * operation on variable through reference, that is one reference is mutable.
+ * Flow Variant: 08 Control flow: if(staticReturnsTrue()) and if(staticReturnsFalse())
+ *
+ * */
+
+//#include <stdio.h>
+//#include <stdlib.h>
+
+/* The two function below always return the same value, so a tool
+   should be able to identify that calls to the functions will always
+   return a fixed value. */
+fn staticReturnsTrue() -> #own(copy){
+    val(newResource(copy))    // return value
+};
+
+fn staticReturnsFalse() -> #own(copy){
+    val(newResource(copy))    // return value
+};
+
+fn Data_Race_08_bad() -> #voidTy{
+    decl data1;
+decl data2;
+
+    decl share_var; transfer newResource(copy) share_var;
+    call staticReturnsTrue(); @{   //if statement
+      data1 mborrow share_var;
+      data2 borrow share_var;
+    },{};
+    /* POTENTIAL FLAW: potential data race will happen because 
+     * both variables data1 and data2 borrow the variable share_var, 
+     * but the variable data1 mutably borrows the variable share_var, 
+     * since there is a writing operation through data1 with *data1 = 10; 
+     */
+    call staticReturnsTrue(); @{   //if statement
+        transfer newResource(copy) *data1;
+    },{};
+};
+
+fn Data_Race_08_good() -> #voidTy{
+    decl data1;
+decl data2;
+
+    decl share_var; transfer newResource(copy) share_var;
+    call staticReturnsTrue(); @{   //if statement
+      data1 mborrow share_var;
+      data2 borrow share_var;
+    },{};
+    call staticReturnsFalse(); @{   //if statement   /* the code below will never run*/
+        
+    }
+     , {
+      *data1;   //printf arguments
+      *data2;   //printf arguments
+    };
+};
+
+fn main(argc:#own(copy), argv:#own()) -> #own(copy){
+    
+    call Data_Race_08_good();
+    
+    
+    call Data_Race_08_bad();
+    
+    val(newResource(copy))    // return value
+};
+decl arg1;
+decl argv1;
+ 
+transfer newResource(copy) arg1;
+transfer newResource() argv1;
+ 
+call main(arg1, argv1);
+

@@ -1,0 +1,4297 @@
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        #Deallocate ( #loc ( 57 ) ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 65 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 47 , 60 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 64 ) )
+        SetItem ( #writev ( 55 , 67 ) )
+        SetItem ( #writev ( 56 , 61 ) )
+        SetItem ( #writev ( 57 , 62 ) )
+        SetItem ( #writev ( 57 , 66 ) )
+        SetItem ( #writev ( 58 , 63 ) )
+      </write>
+      <timer>
+        68
+      </timer>
+      <indexes>
+        #indexes ( 68 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      1
+    </index> , <state>
+      <index>
+        1
+      </index>
+      <k>
+        .
+      </k>
+      <env>
+        arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #uninit
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+      </write>
+      <timer>
+        47
+      </timer>
+      <indexes>
+        #indexes ( 47 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      2
+    </index> , <state>
+      <index>
+        2
+      </index>
+      <k>
+        #Deallocate ( #loc ( 57 ) ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( copy , .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 64 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 63 ) )
+        SetItem ( #writev ( 55 , 66 ) )
+        SetItem ( #writev ( 56 , 60 ) )
+        SetItem ( #writev ( 57 , 61 ) )
+        SetItem ( #writev ( 57 , 65 ) )
+        SetItem ( #writev ( 58 , 62 ) )
+      </write>
+      <timer>
+        67
+      </timer>
+      <indexes>
+        #indexes ( 67 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      3
+    </index> , <state>
+      <index>
+        3
+      </index>
+      <k>
+        #Deallocate ( #loc ( 57 ) ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 65 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 47 , 60 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 64 ) )
+        SetItem ( #writev ( 55 , 67 ) )
+        SetItem ( #writev ( 56 , 61 ) )
+        SetItem ( #writev ( 57 , 62 ) )
+        SetItem ( #writev ( 57 , 66 ) )
+        SetItem ( #writev ( 58 , 63 ) )
+      </write>
+      <timer>
+        68
+      </timer>
+      <indexes>
+        #indexes ( 68 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      4
+    </index> , <state>
+      <index>
+        4
+      </index>
+      <k>
+        #Deallocate ( #loc ( 57 ) ) ~> deallocate line ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 65 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 47 , 60 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 64 ) )
+        SetItem ( #writev ( 55 , 66 ) )
+        SetItem ( #writev ( 56 , 61 ) )
+        SetItem ( #writev ( 57 , 62 ) )
+        SetItem ( #writev ( 58 , 63 ) )
+      </write>
+      <timer>
+        67
+      </timer>
+      <indexes>
+        #indexes ( 67 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      5
+    </index> , <state>
+      <index>
+        5
+      </index>
+      <k>
+        read ( #loc ( 57 ) ) ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> deallocate line ;  deallocate line ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59 )
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 65 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 47 , 60 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 64 ) )
+        SetItem ( #writev ( 56 , 61 ) )
+        SetItem ( #writev ( 57 , 62 ) )
+        SetItem ( #writev ( 58 , 63 ) )
+      </write>
+      <timer>
+        66
+      </timer>
+      <indexes>
+        #indexes ( 66 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      6
+    </index> , <state>
+      <index>
+        6
+      </index>
+      <k>
+        #Deallocate ( #loc ( 57 ) ) ~> deallocate line ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 65 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 47 , 60 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 64 ) )
+        SetItem ( #writev ( 55 , 66 ) )
+        SetItem ( #writev ( 56 , 61 ) )
+        SetItem ( #writev ( 57 , 62 ) )
+        SetItem ( #writev ( 58 , 63 ) )
+      </write>
+      <timer>
+        67
+      </timer>
+      <indexes>
+        #indexes ( 67 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      7
+    </index> , <state>
+      <index>
+        7
+      </index>
+      <k>
+        read ( #loc ( 57 ) ) ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> deallocate line ;  deallocate line ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59 )
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 65 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 47 , 60 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 64 ) )
+        SetItem ( #writev ( 56 , 61 ) )
+        SetItem ( #writev ( 57 , 62 ) )
+        SetItem ( #writev ( 58 , 63 ) )
+      </write>
+      <timer>
+        66
+      </timer>
+      <indexes>
+        #indexes ( 66 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      8
+    </index> , <state>
+      <index>
+        8
+      </index>
+      <k>
+        #Deallocate ( #loc ( 57 ) ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( copy , .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 64 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 63 ) )
+        SetItem ( #writev ( 55 , 66 ) )
+        SetItem ( #writev ( 56 , 60 ) )
+        SetItem ( #writev ( 57 , 61 ) )
+        SetItem ( #writev ( 57 , 65 ) )
+        SetItem ( #writev ( 58 , 62 ) )
+      </write>
+      <timer>
+        67
+      </timer>
+      <indexes>
+        #indexes ( 67 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      9
+    </index> , <state>
+      <index>
+        9
+      </index>
+      <k>
+        #Deallocate ( #loc ( 57 ) ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( copy , .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 64 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 63 ) )
+        SetItem ( #writev ( 55 , 66 ) )
+        SetItem ( #writev ( 56 , 60 ) )
+        SetItem ( #writev ( 57 , 61 ) )
+        SetItem ( #writev ( 57 , 65 ) )
+        SetItem ( #writev ( 58 , 62 ) )
+      </write>
+      <timer>
+        67
+      </timer>
+      <indexes>
+        #indexes ( 67 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      10
+    </index> , <state>
+      <index>
+        10
+      </index>
+      <k>
+        #Deallocate ( #loc ( 57 ) ) ~> deallocate line ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( copy , .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 64 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 63 ) )
+        SetItem ( #writev ( 55 , 65 ) )
+        SetItem ( #writev ( 56 , 60 ) )
+        SetItem ( #writev ( 57 , 61 ) )
+        SetItem ( #writev ( 58 , 62 ) )
+      </write>
+      <timer>
+        66
+      </timer>
+      <indexes>
+        #indexes ( 66 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      11
+    </index> , <state>
+      <index>
+        11
+      </index>
+      <k>
+        read ( #loc ( 57 ) ) ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> deallocate line ;  deallocate line ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( copy , .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59 )
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 64 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 63 ) )
+        SetItem ( #writev ( 56 , 60 ) )
+        SetItem ( #writev ( 57 , 61 ) )
+        SetItem ( #writev ( 58 , 62 ) )
+      </write>
+      <timer>
+        65
+      </timer>
+      <indexes>
+        #indexes ( 65 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      12
+    </index> , <state>
+      <index>
+        12
+      </index>
+      <k>
+        #Deallocate ( #loc ( 57 ) ) ~> deallocate line ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( copy , .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 64 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 63 ) )
+        SetItem ( #writev ( 55 , 65 ) )
+        SetItem ( #writev ( 56 , 60 ) )
+        SetItem ( #writev ( 57 , 61 ) )
+        SetItem ( #writev ( 58 , 62 ) )
+      </write>
+      <timer>
+        66
+      </timer>
+      <indexes>
+        #indexes ( 66 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      13
+    </index> , <state>
+      <index>
+        13
+      </index>
+      <k>
+        read ( #loc ( 57 ) ) ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> deallocate line ;  deallocate line ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( copy , .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59 )
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 64 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 63 ) )
+        SetItem ( #writev ( 56 , 60 ) )
+        SetItem ( #writev ( 57 , 61 ) )
+        SetItem ( #writev ( 58 , 62 ) )
+      </write>
+      <timer>
+        65
+      </timer>
+      <indexes>
+        #indexes ( 65 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      14
+    </index> , <state>
+      <index>
+        14
+      </index>
+      <k>
+        #Deallocate ( #loc ( 57 ) ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( copy , .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 64 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 63 ) )
+        SetItem ( #writev ( 55 , 66 ) )
+        SetItem ( #writev ( 56 , 60 ) )
+        SetItem ( #writev ( 57 , 61 ) )
+        SetItem ( #writev ( 57 , 65 ) )
+        SetItem ( #writev ( 58 , 62 ) )
+      </write>
+      <timer>
+        67
+      </timer>
+      <indexes>
+        #indexes ( 67 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      15
+    </index> , <state>
+      <index>
+        15
+      </index>
+      <k>
+        #Deallocate ( #loc ( 57 ) ) ~> deallocate line ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( copy , .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 64 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 63 ) )
+        SetItem ( #writev ( 55 , 65 ) )
+        SetItem ( #writev ( 56 , 60 ) )
+        SetItem ( #writev ( 57 , 61 ) )
+        SetItem ( #writev ( 58 , 62 ) )
+      </write>
+      <timer>
+        66
+      </timer>
+      <indexes>
+        #indexes ( 66 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      16
+    </index> , <state>
+      <index>
+        16
+      </index>
+      <k>
+        read ( #loc ( 57 ) ) ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> deallocate line ;  deallocate line ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( copy , .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59 )
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 64 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 63 ) )
+        SetItem ( #writev ( 56 , 60 ) )
+        SetItem ( #writev ( 57 , 61 ) )
+        SetItem ( #writev ( 58 , 62 ) )
+      </write>
+      <timer>
+        65
+      </timer>
+      <indexes>
+        #indexes ( 65 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      17
+    </index> , <state>
+      <index>
+        17
+      </index>
+      <k>
+        #Deallocate ( #loc ( 57 ) ) ~> deallocate line ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( copy , .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 64 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 63 ) )
+        SetItem ( #writev ( 55 , 65 ) )
+        SetItem ( #writev ( 56 , 60 ) )
+        SetItem ( #writev ( 57 , 61 ) )
+        SetItem ( #writev ( 58 , 62 ) )
+      </write>
+      <timer>
+        66
+      </timer>
+      <indexes>
+        #indexes ( 66 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      18
+    </index> , <state>
+      <index>
+        18
+      </index>
+      <k>
+        read ( #loc ( 57 ) ) ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> deallocate line ;  deallocate line ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) ok ;  .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( copy , .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #rs ( copy , .Props )
+        18 |-> #rs ( copy , .Props )
+        19 |-> #rs ( copy , .Props )
+        20 |-> #uninit
+        23 |-> #rs ( copy , .Props )
+        25 |-> #rs ( .Props )
+        27 |-> #rs ( copy , .Props )
+        28 |-> #uninit
+        30 |-> #uninit
+        32 |-> #uninit
+        33 |-> #rs ( copy , .Props )
+        35 |-> #uninit
+        37 |-> #uninit
+        39 |-> #uninit
+        41 |-> #uninit
+        42 |-> #uninit
+        43 |-> #uninit
+        45 |-> #uninit
+        47 |-> #rs ( copy , .Props )
+        49 |-> #rs ( copy , .Props )
+        51 |-> #rs ( copy , .Props )
+        53 |-> #rs ( copy , .Props )
+        55 |-> #rs ( copy , .Props )
+        56 |-> #rs ( .Props )
+        57 |-> #uninit
+        58 |-> #rs ( copy , .Props )
+        59 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        buflen |-> 58
+        datestr |-> 28
+        errno |-> 16
+        format |-> 49
+        in_stream |-> 56
+        input_filename |-> 47
+        line |-> 57
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 55
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        tz |-> 51
+        tzstring |-> 53
+        when |-> 59 )
+        ListItem ( when )
+        ListItem ( buflen )
+        ListItem ( line )
+        ListItem ( in_stream )
+        ListItem ( ok )
+        ListItem ( tzstring )
+        ListItem ( tz )
+        ListItem ( format )
+        ListItem ( input_filename )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( arg1 |-> 19
+        argc |-> 23
+        argv1 |-> 20
+        argv |-> 25
+        batch_file |-> 37
+        datestr |-> 28
+        errno |-> 16
+        format |-> 35
+        line_length |-> 18
+        long_options |-> 8
+        new_format |-> 45
+        ok |-> 42
+        optarg |-> 12
+        optc |-> 27
+        optind |-> 14
+        option_specified_date |-> 43
+        parse_datetime_flags |-> 10
+        reference |-> 39
+        refstats |-> 41
+        rfc_email_format |-> 4
+        set_date |-> 33
+        set_datestr |-> 30
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0
+        when |-> 32 )
+        ListItem ( new_format )
+        ListItem ( option_specified_date )
+        ListItem ( ok )
+        ListItem ( refstats )
+        ListItem ( reference )
+        ListItem ( batch_file )
+        ListItem ( format )
+        ListItem ( set_date )
+        ListItem ( when )
+        ListItem ( set_datestr )
+        ListItem ( datestr )
+        ListItem ( optc )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 19
+        argv1 |-> 20
+        errno |-> 16
+        line_length |-> 18
+        long_options |-> 8
+        optarg |-> 12
+        optind |-> 14
+        parse_datetime_flags |-> 10
+        rfc_email_format |-> 4
+        short_options |-> 6
+        time_spec |-> 2
+        time_spec_string |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( line_length )
+        ListItem ( errno )
+        ListItem ( optind )
+        ListItem ( optarg )
+        ListItem ( parse_datetime_flags )
+        ListItem ( long_options )
+        ListItem ( short_options )
+        ListItem ( rfc_email_format )
+        ListItem ( time_spec )
+        ListItem ( time_spec_string )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 64 ) )
+        SetItem ( #writev ( 19 , 21 ) )
+        SetItem ( #writev ( 20 , 22 ) )
+        SetItem ( #writev ( 23 , 24 ) )
+        SetItem ( #writev ( 25 , 26 ) )
+        SetItem ( #writev ( 27 , 44 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 33 , 34 ) )
+        SetItem ( #writev ( 35 , 36 ) )
+        SetItem ( #writev ( 37 , 38 ) )
+        SetItem ( #writev ( 39 , 40 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 47 , 48 ) )
+        SetItem ( #writev ( 49 , 50 ) )
+        SetItem ( #writev ( 51 , 52 ) )
+        SetItem ( #writev ( 53 , 54 ) )
+        SetItem ( #writev ( 55 , 63 ) )
+        SetItem ( #writev ( 56 , 60 ) )
+        SetItem ( #writev ( 57 , 61 ) )
+        SetItem ( #writev ( 58 , 62 ) )
+      </write>
+      <timer>
+        65
+      </timer>
+      <indexes>
+        #indexes ( 65 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    19
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      batch_convert
+    </fname> , <funDef>
+      <fname>
+        batch_convert
+      </fname>
+      <fparams>
+        input_filename : #own ( .Props ) , format : #own ( .Props ) , tz : #own ( copy , .Props ) , tzstring : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { decl ok ;  decl in_stream ;  decl line ;  decl buflen ;  decl when ;  input_filename ;  @ { transfer newResource ( .Props ) input_filename ;  transfer newResource ( .Props ) in_stream ;  .Stmts } , { input_filename ;  transfer newResource ( .Props ) in_stream ;  @ { errno ;  input_filename ;  .Stmts } , { .Stmts } , .Blocks ;  .Stmts } , .Blocks ;  transfer #uninit line ;  transfer newResource ( copy , .Props ) buflen ;  transfer newResource ( copy , .Props ) ok ;  transfer newResource ( copy , .Props ) line_length ;  line_length ;  @ { .Stmts } , { .Stmts } , .Blocks ;  @ { @ { transfer newResource ( .Props ) line ;  .Stmts } , { .Stmts } , .Blocks ;  line ;  transfer newResource ( copy , .Props ) ok ;  .Stmts } , { transfer newResource ( copy , .Props ) ok ;  .Stmts } , .Blocks ;  deallocate line ;  deallocate line ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { decl optc ;  decl datestr ;  transfer #uninit datestr ;  decl set_datestr ;  transfer #uninit set_datestr ;  decl when ;  decl set_date ;  transfer newResource ( copy , .Props ) set_date ;  decl format ;  transfer #uninit format ;  decl batch_file ;  transfer #uninit batch_file ;  decl reference ;  transfer #uninit reference ;  decl refstats ;  decl ok ;  decl option_specified_date ;  argc ;  argv ;  transfer newResource ( copy , .Props ) optc ;  decl new_format ;  transfer #uninit new_format ;  @ { call batch_convert ( newResource ( copy , .Props ) , newResource ( copy , .Props ) , newResource ( copy , .Props ) , newResource ( copy , .Props ) , .Exps ) ;  transfer newResource ( copy , .Props ) ok ;  .Stmts } , { .Stmts } , .Blocks ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      usage
+    </fname> , <funDef>
+      <fname>
+        usage
+      </fname>
+      <fparams>
+        status : #own ( copy , .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { status ;  @ { .Stmts } , { .Stmts } , .Blocks ;  status ;  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>

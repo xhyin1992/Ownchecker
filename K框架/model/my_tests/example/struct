@@ -1,0 +1,17 @@
+decl data;
+transfer newResource(copy) data;
+//decl b1; b1 mborrow data.0;
+//data.0;
+
+//call printLine("Calling bad()...");
+
+fn print(p:#own())->#own(copy){
+*p;
+};
+
+decl a;
+transfer newResource(copy) a;
+call print(p borrow a); //print(&a)
+
+decl b;
+b borrow a;

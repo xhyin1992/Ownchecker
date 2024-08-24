@@ -1,0 +1,15 @@
+fn use(m:#own()) -> #voidTy {
+ m;
+};
+
+decl p; transfer newResource() p;
+decl q;
+@{
+   transfer newResource() q;
+   call use(q);
+   //q;
+},{
+    transfer p q;
+    q;
+};
+//q;

@@ -1,0 +1,57 @@
+/*
+ * @description
+ * Flow Variant: 05 Control flow: if(staticTrue) and if(staticFalse)
+ *
+ * */
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <pthread.h>
+
+decl staticTrue; transfer newResource(copy) staticTrue; /* true */
+ 
+fn thrd2(i:#own())-> #own(){
+  transfer newResource(copy) *i;
+};
+
+fn thrd1(i:#own())-> #own(){
+  transfer newResource(copy) *i;
+};
+
+fn increse_num(i:#own()) -> #own(){
+      transfer newResource(copy) *i;
+};
+
+fn data_race_muiltithreading_05_bad() -> #voidTy{
+    staticTrue; @{
+       decl sharedi; transfer newResource(copy) sharedi;
+       decl ret1;
+       decl ret2;
+       decl thrd1;
+       decl thrd2;
+
+       call thrd1(sharedi); transfer newResource(copy) ret1;
+       call thrd2(sharedi); transfer newResource(copy) ret2;
+
+       sharedi;
+       
+    },{
+      
+    };
+};
+
+
+fn main(argc:#own(copy), argv:#own()) -> #own(copy)
+
+    call data_race_muiltithreading_05_bad();
+    val(newResource(copy))    // return value
+};
+decl arg1;
+decl argv1;
+ 
+transfer newResource(copy) arg1;
+transfer newResource() argv1;
+ 
+call main(arg1, argv1);
+
+

@@ -1,0 +1,6 @@
+
+
+fn f(x:#own(),y:#ref('a,#own())) -> #own() {
+   decl z;
+   z borrow x;
+}

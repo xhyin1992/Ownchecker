@@ -1,0 +1,150 @@
+decl selinux_enabled; transfer newResource(copy) selinux_enabled;
+decl use_default_selinux_context; transfer newResource(copy) use_default_selinux_context;
+decl owner_name;
+decl owner_id;
+decl group_name;
+decl group_id;
+decl mode; transfer newResource(copy) mode; 
+decl dir_mode; transfer newResource(copy) dir_mode; 
+decl dir_mode_bits; transfer newResource(copy) dir_mode_bits;
+decl copy_only_if_needed;
+decl strip_files;
+decl dir_arg;
+decl strip_program; transfer newResource(copy) strip_program;
+decl errno;
+decl optarg; transfer newResource() optarg;
+
+fn main(argc:#own(copy), argv:#own()) -> #own(copy){
+  decl optc;
+  decl exit_status; transfer newResource(copy) exit_status;
+  decl specified_mode; transfer #uninit specified_mode;
+  decl make_backups; transfer newResource(copy) make_backups;
+  decl backup_suffix; transfer #uninit backup_suffix;
+  decl version_control_string; transfer #uninit version_control_string;
+  decl mkdir_and_install; transfer newResource(copy) mkdir_and_install;
+  decl x; transfer newResource(copy) x;
+  decl target_directory; transfer #uninit target_directory;
+  decl no_target_directory; transfer newResource(copy) no_target_directory;
+  decl n_files;
+  decl file;
+  decl strip_program_specified; transfer newResource(copy) strip_program_specified;
+  decl scontext; transfer #uninit scontext;
+ 
+  transfer newResource(copy) selinux_enabled;
+
+  argc; argv;
+  argv;
+  x; call cp_option_init (x);
+
+  transfer #uninit owner_name;
+  transfer #uninit group_name;
+  transfer newResource(copy) strip_files;
+  transfer newResource(copy) dir_arg;
+  argc; argv;!{   //while statement
+      
+        optc; transfer newResource(copy) optc;
+        @{
+   //switch case statement          
+        transfer newResource(copy) make_backups;
+          optarg; transfer newResource(copy) optarg;
+          @{
+            transfer optarg version_control_string;
+            };
+          }
+        ,{
+          
+          }
+        ,{
+          transfer newResource(copy) copy_only_if_needed;
+          
+          }
+        ,{
+          transfer newResource(copy) strip_files;
+          
+          }
+        ,{
+          transfer newResource(copy) strip_program;
+          transfer newResource(copy) strip_program_specified;
+          
+          }
+        ,{
+          transfer newResource(copy) dir_arg;
+          
+          }
+        ,{
+          transfer newResource(copy) mkdir_and_install;
+          
+          }
+        ,{
+          transfer newResource(copy) x;
+          
+          }
+        ,{
+          transfer optarg group_name;
+          
+          }
+        ,{
+          transfer optarg specified_mode;
+          
+          }
+        ,{
+          transfer optarg owner_name;
+          
+          }
+        ,{
+          transfer newResource(copy) x;
+          
+          }
+        ,{
+          transfer newResource(copy) make_backups;
+          transfer optarg backup_suffix;
+          
+          }
+        ,{
+          target_directory; @{
+           
+           };
+          transfer optarg target_directory;
+          
+          }
+        ,{
+          transfer newResource(copy) no_target_directory;
+          
+          }
+        ,{
+          selinux_enabled; @{   //if statement
+              
+            };
+          transfer newResource(copy) x;
+          transfer newResource(copy) use_default_selinux_context;
+          
+          }
+        ,{
+          selinux_enabled; @{   //if statement
+              transfer newResource(copy) use_default_selinux_context;
+
+              optarg; @{
+                transfer optarg scontext;
+                },{
+                transfer newResource(copy) x;
+                };
+            }, {
+              
+            }; 
+          }
+        ,{
+          call usage (newResource(copy));
+          };
+        
+    };
+    
+  exit_status; val(newResource(copy))     // return value
+};
+
+decl arg1;
+decl argv1;
+ 
+transfer newResource(copy) arg1;
+transfer newResource() argv1;
+ 
+call main(arg1, argv1);

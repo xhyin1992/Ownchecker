@@ -1,0 +1,85 @@
+decl selinux_enabled; transfer newResource(copy) selinux_enabled;
+decl use_default_selinux_context; transfer newResource(copy) use_default_selinux_context;
+decl owner_name;
+decl owner_id;
+decl group_name;
+decl group_id;
+decl mode; transfer newResource(copy) mode; 
+decl dir_mode; transfer newResource(copy) dir_mode; 
+decl dir_mode_bits; transfer newResource(copy) dir_mode_bits;
+decl copy_only_if_needed;
+decl strip_files;
+decl dir_arg;
+decl strip_program; transfer newResource(copy) strip_program;
+decl errno; transfer newResource(copy) errno
+decl optarg; transfer newResource() optarg;
+
+fn cp_option_init(y:#own()) -> #voidTy{
+  y;
+  transfer newResource(copy) y;
+};
+
+fn install_file_in_file(from1:#own(), to1:#own(), x1:#own()) -> #own(copy){
+  decl from_sb; transfer newResource(copy) from_sb;
+  x1; from1; from_sb; @{   //if statement
+      errno; from1;
+      val(newResource(copy))     // return value
+    };
+  from1; to1; x1; @{   //if statement
+    val(newResource(copy))     // return value
+    };
+  strip_files; @{   //if statement
+    to1; @{
+        to1; @{
+          errno; to1;
+          };
+        val(newResource(copy))     // return value
+      };
+    };
+  x1; strip_files; to1; @{   //if statement
+    val(newResource(copy))     // return value
+    };
+  call change_attributes (to1);
+  val(newResource(copy))     // return value
+};
+
+fn main(argc:#own(copy), argv:#own()) -> #own(copy){
+  decl optc;
+  decl exit_status; transfer newResource(copy) exit_status;
+  decl specified_mode; transfer #uninit specified_mode;
+  decl make_backups; transfer newResource(copy) make_backups;
+  decl backup_suffix; transfer #uninit backup_suffix;
+  decl version_control_string; transfer #uninit version_control_string;
+  decl mkdir_and_install; transfer newResource(copy) mkdir_and_install;
+  decl x; transfer newResource(copy) x;
+  decl target_directory; transfer #uninit target_directory;
+  decl no_target_directory; transfer newResource(copy) no_target_directory;
+  decl n_files;
+  decl file; transfer newResource(copy) file;
+  decl strip_program_specified; transfer newResource(copy) strip_program_specified;
+  decl scontext; transfer #uninit scontext;
+ 
+  transfer newResource(copy) selinux_enabled;
+
+  argc; argv;
+  argv;
+  call cp_option_init (x);
+
+  transfer #uninit owner_name;
+  transfer #uninit group_name;
+  transfer newResource(copy) strip_files;
+  transfer newResource(copy) dir_arg;
+  argc; argv; transfer newResource(copy) optc;
+  
+  call install_file_in_file(file, file, x);
+
+  exit_status; val(newResource(copy))     // return value
+};
+
+decl arg1;
+decl argv1;
+ 
+transfer newResource(copy) arg1;
+transfer newResource() argv1;
+ 
+call main(arg1, argv1);

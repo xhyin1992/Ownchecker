@@ -1,0 +1,3361 @@
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        #borrowMutCK ( 8 , 12 , 12 , 10 ) ~> #freezer#Read0_ ( ) ~> #loc ( 10 ) ~> #freezer#expStmt0_ ( ) ~> * data2 ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_01_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        8 |-> #br ( 12 , 12 , #mutRef ( 10 ) )
+        9 |-> #br ( 13 , 13 , #immRef ( 10 ) )
+        10 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+      </write>
+      <timer>
+        14
+      </timer>
+      <indexes>
+        #indexes ( 14 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    1
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_01_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_01_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  data1 mborrow share_var ;  data2 borrow share_var ;  transfer newResource ( copy , .Props ) * data1 ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_01_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_01_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  data1 mborrow share_var ;  data2 borrow share_var ;  * data1 ;  * data2 ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_01_good ( .Exps ) ;  call Data_Race_01_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        #lvDref ( #loc ( 14 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 14
+        data2 |-> 15
+        share_var |-> 16
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        14 |-> #br ( 18 , 18 , #mutRef ( 16 ) )
+        15 |-> #br ( 19 , 19 , #immRef ( 16 ) )
+        16 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 14
+        data2 |-> 15
+        share_var |-> 16 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 20 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+      </write>
+      <timer>
+        20
+      </timer>
+      <indexes>
+        #indexes ( 20 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      1
+    </index> , <state>
+      <index>
+        1
+      </index>
+      <k>
+        #borrowMutCK ( 8 , 12 , 12 , 10 ) ~> #freezer#Read0_ ( ) ~> #loc ( 10 ) ~> #freezer#expStmt0_ ( ) ~> * data2 ;  .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_02_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        8 |-> #br ( 12 , 12 , #mutRef ( 10 ) )
+        9 |-> #br ( 13 , 13 , #immRef ( 10 ) )
+        10 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+      </write>
+      <timer>
+        14
+      </timer>
+      <indexes>
+        #indexes ( 14 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    2
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_02_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_02_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  @ { transfer newResource ( copy , .Props ) * data1 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_02_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_02_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_02_good ( .Exps ) ;  call Data_Race_02_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        #lvDref ( #loc ( 14 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 14
+        data2 |-> 15
+        share_var |-> 16
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        14 |-> #br ( 18 , 18 , #mutRef ( 16 ) )
+        15 |-> #br ( 19 , 19 , #immRef ( 16 ) )
+        16 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 14
+        data2 |-> 15
+        share_var |-> 16 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 20 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+      </write>
+      <timer>
+        20
+      </timer>
+      <indexes>
+        #indexes ( 20 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      1
+    </index> , <state>
+      <index>
+        1
+      </index>
+      <k>
+        #borrowMutCK ( 8 , 12 , 12 , 10 ) ~> #freezer#Read0_ ( ) ~> #loc ( 10 ) ~> #freezer#expStmt0_ ( ) ~> * data2 ;  .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_03_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        8 |-> #br ( 12 , 12 , #mutRef ( 10 ) )
+        9 |-> #br ( 13 , 13 , #immRef ( 10 ) )
+        10 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+      </write>
+      <timer>
+        14
+      </timer>
+      <indexes>
+        #indexes ( 14 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    2
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_03_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_03_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  @ { transfer newResource ( copy , .Props ) * data1 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_03_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_03_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_03_good ( .Exps ) ;  call Data_Race_03_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        #lvDref ( #loc ( 18 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        STATIC_CONST_FALSE |-> 2
+        STATIC_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 18
+        data2 |-> 19
+        share_var |-> 20
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        5 |-> #uninit
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( .Props )
+        18 |-> #br ( 22 , 22 , #mutRef ( 20 ) )
+        19 |-> #br ( 23 , 23 , #immRef ( 20 ) )
+        20 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( STATIC_CONST_FALSE |-> 2
+        STATIC_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 18
+        data2 |-> 19
+        share_var |-> 20 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( STATIC_CONST_FALSE |-> 2
+        STATIC_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( STATIC_CONST_FALSE |-> 2
+        STATIC_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argv1 |-> 5 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( STATIC_CONST_FALSE )
+        ListItem ( STATIC_CONST_TRUE )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 6 ) )
+        SetItem ( #writev ( 5 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 18 , 24 ) )
+        SetItem ( #writev ( 20 , 21 ) )
+      </write>
+      <timer>
+        24
+      </timer>
+      <indexes>
+        #indexes ( 24 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      1
+    </index> , <state>
+      <index>
+        1
+      </index>
+      <k>
+        #borrowMutCK ( 12 , 16 , 16 , 14 ) ~> #freezer#Read0_ ( ) ~> #loc ( 14 ) ~> #freezer#expStmt0_ ( ) ~> * data2 ;  .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_04_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        STATIC_CONST_FALSE |-> 2
+        STATIC_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 12
+        data2 |-> 13
+        share_var |-> 14
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        5 |-> #uninit
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( .Props )
+        12 |-> #br ( 16 , 16 , #mutRef ( 14 ) )
+        13 |-> #br ( 17 , 17 , #immRef ( 14 ) )
+        14 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( STATIC_CONST_FALSE |-> 2
+        STATIC_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 12
+        data2 |-> 13
+        share_var |-> 14 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( STATIC_CONST_FALSE |-> 2
+        STATIC_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( STATIC_CONST_FALSE |-> 2
+        STATIC_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argv1 |-> 5 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( STATIC_CONST_FALSE )
+        ListItem ( STATIC_CONST_TRUE )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 6 ) )
+        SetItem ( #writev ( 5 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+      </write>
+      <timer>
+        18
+      </timer>
+      <indexes>
+        #indexes ( 18 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    2
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_04_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_04_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  STATIC_CONST_TRUE ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  STATIC_CONST_TRUE ;  @ { transfer newResource ( copy , .Props ) * data1 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_04_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_04_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  STATIC_CONST_TRUE ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  STATIC_CONST_FALSE ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_04_good ( .Exps ) ;  call Data_Race_04_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        #lvDref ( #loc ( 18 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 18
+        data2 |-> 19
+        share_var |-> 20
+        staticFalse |-> 2
+        staticTrue |-> 0
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        5 |-> #uninit
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( .Props )
+        18 |-> #br ( 22 , 22 , #mutRef ( 20 ) )
+        19 |-> #br ( 23 , 23 , #immRef ( 20 ) )
+        20 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 18
+        data2 |-> 19
+        share_var |-> 20
+        staticFalse |-> 2
+        staticTrue |-> 0 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        staticFalse |-> 2
+        staticTrue |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 4
+        argv1 |-> 5
+        staticFalse |-> 2
+        staticTrue |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( staticFalse )
+        ListItem ( staticTrue )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 6 ) )
+        SetItem ( #writev ( 5 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 18 , 24 ) )
+        SetItem ( #writev ( 20 , 21 ) )
+      </write>
+      <timer>
+        24
+      </timer>
+      <indexes>
+        #indexes ( 24 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      1
+    </index> , <state>
+      <index>
+        1
+      </index>
+      <k>
+        #borrowMutCK ( 12 , 16 , 16 , 14 ) ~> #freezer#Read0_ ( ) ~> #loc ( 14 ) ~> #freezer#expStmt0_ ( ) ~> * data2 ;  .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_05_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 12
+        data2 |-> 13
+        share_var |-> 14
+        staticFalse |-> 2
+        staticTrue |-> 0
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        5 |-> #uninit
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( .Props )
+        12 |-> #br ( 16 , 16 , #mutRef ( 14 ) )
+        13 |-> #br ( 17 , 17 , #immRef ( 14 ) )
+        14 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 12
+        data2 |-> 13
+        share_var |-> 14
+        staticFalse |-> 2
+        staticTrue |-> 0 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        staticFalse |-> 2
+        staticTrue |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 4
+        argv1 |-> 5
+        staticFalse |-> 2
+        staticTrue |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( staticFalse )
+        ListItem ( staticTrue )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 6 ) )
+        SetItem ( #writev ( 5 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+      </write>
+      <timer>
+        18
+      </timer>
+      <indexes>
+        #indexes ( 18 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    2
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_05_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_05_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  staticTrue ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  staticTrue ;  @ { transfer newResource ( copy , .Props ) * data1 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_05_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_05_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  staticTrue ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  staticFalse ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_05_good ( .Exps ) ;  call Data_Race_05_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        #lvDref ( #loc ( 16 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        STATIC_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        data1 |-> 16
+        data2 |-> 17
+        share_var |-> 18
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        16 |-> #br ( 20 , 20 , #mutRef ( 18 ) )
+        17 |-> #br ( 21 , 21 , #immRef ( 18 ) )
+        18 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( STATIC_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        data1 |-> 16
+        data2 |-> 17
+        share_var |-> 18 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( STATIC_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( STATIC_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argv1 |-> 3 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( STATIC_CONST_FIVE )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 16 , 22 ) )
+        SetItem ( #writev ( 18 , 19 ) )
+      </write>
+      <timer>
+        22
+      </timer>
+      <indexes>
+        #indexes ( 22 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      1
+    </index> , <state>
+      <index>
+        1
+      </index>
+      <k>
+        #borrowMutCK ( 10 , 14 , 14 , 12 ) ~> #freezer#Read0_ ( ) ~> #loc ( 12 ) ~> #freezer#expStmt0_ ( ) ~> * data2 ;  .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_06_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        STATIC_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        data1 |-> 10
+        data2 |-> 11
+        share_var |-> 12
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        10 |-> #br ( 14 , 14 , #mutRef ( 12 ) )
+        11 |-> #br ( 15 , 15 , #immRef ( 12 ) )
+        12 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( STATIC_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        data1 |-> 10
+        data2 |-> 11
+        share_var |-> 12 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( STATIC_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( STATIC_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argv1 |-> 3 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( STATIC_CONST_FIVE )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+      </write>
+      <timer>
+        16
+      </timer>
+      <indexes>
+        #indexes ( 16 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    2
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_06_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_06_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  STATIC_CONST_FIVE ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  STATIC_CONST_FIVE ;  @ { transfer newResource ( copy , .Props ) * data1 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_06_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_06_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  STATIC_CONST_FIVE ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  STATIC_CONST_FIVE ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_06_good ( .Exps ) ;  call Data_Race_06_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        decl share_var : #own ( copy , .Props ) ; ~> transfer newResource ( copy , .Props ) share_var ;  staticFive ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  staticFive ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_07_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        data1 |-> 10
+        data2 |-> 11
+        staticFive |-> 0
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        10 |-> #uninit
+        11 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        staticFive |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 2
+        argv1 |-> 3
+        staticFive |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( staticFive )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+      </write>
+      <timer>
+        12
+      </timer>
+      <indexes>
+        #indexes ( 12 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    1
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_07_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_07_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  staticFive ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  staticFive ;  @ { transfer newResource ( copy , .Props ) * data1 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_07_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_07_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var : #own ( copy , .Props ) ;  transfer newResource ( copy , .Props ) share_var ;  staticFive ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  staticFive ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_07_good ( .Exps ) ;  call Data_Race_07_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        #lvDref ( #loc ( 14 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 14
+        data2 |-> 15
+        share_var |-> 16
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        14 |-> #br ( 18 , 18 , #mutRef ( 16 ) )
+        15 |-> #br ( 19 , 19 , #immRef ( 16 ) )
+        16 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 14
+        data2 |-> 15
+        share_var |-> 16 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 20 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+      </write>
+      <timer>
+        20
+      </timer>
+      <indexes>
+        #indexes ( 20 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      1
+    </index> , <state>
+      <index>
+        1
+      </index>
+      <k>
+        #borrowMutCK ( 8 , 12 , 12 , 10 ) ~> #freezer#Read0_ ( ) ~> #loc ( 10 ) ~> #freezer#expStmt0_ ( ) ~> * data2 ;  .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_08_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        8 |-> #br ( 12 , 12 , #mutRef ( 10 ) )
+        9 |-> #br ( 13 , 13 , #immRef ( 10 ) )
+        10 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+      </write>
+      <timer>
+        14
+      </timer>
+      <indexes>
+        #indexes ( 14 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    2
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_08_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_08_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  call staticReturnsTrue ( .Exps ) ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  call staticReturnsTrue ( .Exps ) ;  @ { transfer newResource ( copy , .Props ) * data1 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_08_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_08_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  call staticReturnsTrue ( .Exps ) ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  call staticReturnsFalse ( .Exps ) ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_08_good ( .Exps ) ;  call Data_Race_08_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      staticReturnsFalse
+    </fname> , <funDef>
+      <fname>
+        staticReturnsFalse
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      staticReturnsTrue
+    </fname> , <funDef>
+      <fname>
+        staticReturnsTrue
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        #lvDref ( #loc ( 18 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        GLOBAL_CONST_FALSE |-> 2
+        GLOBAL_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 18
+        data2 |-> 19
+        share_var |-> 20
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        5 |-> #uninit
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( .Props )
+        18 |-> #br ( 22 , 22 , #mutRef ( 20 ) )
+        19 |-> #br ( 23 , 23 , #immRef ( 20 ) )
+        20 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( GLOBAL_CONST_FALSE |-> 2
+        GLOBAL_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 18
+        data2 |-> 19
+        share_var |-> 20 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( GLOBAL_CONST_FALSE |-> 2
+        GLOBAL_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( GLOBAL_CONST_FALSE |-> 2
+        GLOBAL_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argv1 |-> 5 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( GLOBAL_CONST_FALSE )
+        ListItem ( GLOBAL_CONST_TRUE )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 6 ) )
+        SetItem ( #writev ( 5 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 18 , 24 ) )
+        SetItem ( #writev ( 20 , 21 ) )
+      </write>
+      <timer>
+        24
+      </timer>
+      <indexes>
+        #indexes ( 24 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      1
+    </index> , <state>
+      <index>
+        1
+      </index>
+      <k>
+        #borrowMutCK ( 12 , 16 , 16 , 14 ) ~> #freezer#Read0_ ( ) ~> #loc ( 14 ) ~> #freezer#expStmt0_ ( ) ~> * data2 ;  .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_09_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        GLOBAL_CONST_FALSE |-> 2
+        GLOBAL_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 12
+        data2 |-> 13
+        share_var |-> 14
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        5 |-> #uninit
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( .Props )
+        12 |-> #br ( 16 , 16 , #mutRef ( 14 ) )
+        13 |-> #br ( 17 , 17 , #immRef ( 14 ) )
+        14 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( GLOBAL_CONST_FALSE |-> 2
+        GLOBAL_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 12
+        data2 |-> 13
+        share_var |-> 14 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( GLOBAL_CONST_FALSE |-> 2
+        GLOBAL_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( GLOBAL_CONST_FALSE |-> 2
+        GLOBAL_CONST_TRUE |-> 0
+        arg1 |-> 4
+        argv1 |-> 5 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( GLOBAL_CONST_FALSE )
+        ListItem ( GLOBAL_CONST_TRUE )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 6 ) )
+        SetItem ( #writev ( 5 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+      </write>
+      <timer>
+        18
+      </timer>
+      <indexes>
+        #indexes ( 18 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    2
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_09_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_09_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  GLOBAL_CONST_TRUE ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  GLOBAL_CONST_TRUE ;  @ { transfer newResource ( copy , .Props ) * data1 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_09_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_09_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  GLOBAL_CONST_TRUE ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  GLOBAL_CONST_FALSE ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_09_good ( .Exps ) ;  call Data_Race_09_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        #lvDref ( #loc ( 18 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 18
+        data2 |-> 19
+        globalFalse |-> 2
+        globalTrue |-> 0
+        share_var |-> 20
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        5 |-> #uninit
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( .Props )
+        18 |-> #br ( 22 , 22 , #mutRef ( 20 ) )
+        19 |-> #br ( 23 , 23 , #immRef ( 20 ) )
+        20 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 18
+        data2 |-> 19
+        globalFalse |-> 2
+        globalTrue |-> 0
+        share_var |-> 20 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        globalFalse |-> 2
+        globalTrue |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 4
+        argv1 |-> 5
+        globalFalse |-> 2
+        globalTrue |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( globalFalse )
+        ListItem ( globalTrue )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 6 ) )
+        SetItem ( #writev ( 5 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 18 , 24 ) )
+        SetItem ( #writev ( 20 , 21 ) )
+      </write>
+      <timer>
+        24
+      </timer>
+      <indexes>
+        #indexes ( 24 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      1
+    </index> , <state>
+      <index>
+        1
+      </index>
+      <k>
+        #borrowMutCK ( 12 , 16 , 16 , 14 ) ~> #freezer#Read0_ ( ) ~> #loc ( 14 ) ~> #freezer#expStmt0_ ( ) ~> * data2 ;  .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_10_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 12
+        data2 |-> 13
+        globalFalse |-> 2
+        globalTrue |-> 0
+        share_var |-> 14
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        4 |-> #rs ( copy , .Props )
+        5 |-> #uninit
+        8 |-> #rs ( copy , .Props )
+        10 |-> #rs ( .Props )
+        12 |-> #br ( 16 , 16 , #mutRef ( 14 ) )
+        13 |-> #br ( 17 , 17 , #immRef ( 14 ) )
+        14 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        data1 |-> 12
+        data2 |-> 13
+        globalFalse |-> 2
+        globalTrue |-> 0
+        share_var |-> 14 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 4
+        argc |-> 8
+        argv1 |-> 5
+        argv |-> 10
+        globalFalse |-> 2
+        globalTrue |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 4
+        argv1 |-> 5
+        globalFalse |-> 2
+        globalTrue |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( globalFalse )
+        ListItem ( globalTrue )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 3 ) )
+        SetItem ( #writev ( 4 , 6 ) )
+        SetItem ( #writev ( 5 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+      </write>
+      <timer>
+        18
+      </timer>
+      <indexes>
+        #indexes ( 18 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    2
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_10_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_10_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  globalTrue ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  globalTrue ;  @ { transfer newResource ( copy , .Props ) * data1 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_10_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_10_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  globalTrue ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  globalFalse ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_10_good ( .Exps ) ;  call Data_Race_10_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        #lvDref ( #loc ( 14 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 14
+        data2 |-> 15
+        share_var |-> 16
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        14 |-> #br ( 18 , 18 , #mutRef ( 16 ) )
+        15 |-> #br ( 19 , 19 , #immRef ( 16 ) )
+        16 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 14
+        data2 |-> 15
+        share_var |-> 16 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 20 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+      </write>
+      <timer>
+        20
+      </timer>
+      <indexes>
+        #indexes ( 20 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      1
+    </index> , <state>
+      <index>
+        1
+      </index>
+      <k>
+        #borrowMutCK ( 8 , 12 , 12 , 10 ) ~> #freezer#Read0_ ( ) ~> #loc ( 10 ) ~> #freezer#expStmt0_ ( ) ~> * data2 ;  .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_11_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        8 |-> #br ( 12 , 12 , #mutRef ( 10 ) )
+        9 |-> #br ( 13 , 13 , #immRef ( 10 ) )
+        10 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+      </write>
+      <timer>
+        14
+      </timer>
+      <indexes>
+        #indexes ( 14 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    2
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_11_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_11_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  call globalReturnsTrue ( .Exps ) ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  call globalReturnsTrue ( .Exps ) ;  @ { transfer newResource ( copy , .Props ) * data1 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_11_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_11_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  call globalReturnsTrue ( .Exps ) ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  call globalReturnsFalse ( .Exps ) ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      globalReturnsFalse
+    </fname> , <funDef>
+      <fname>
+        globalReturnsFalse
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      globalReturnsTrue
+    </fname> , <funDef>
+      <fname>
+        globalReturnsTrue
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_11_good ( .Exps ) ;  call Data_Race_11_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        call rand ( .Exps ) ~> #freezer#expStmt0_ ( ) ~> transfer newResource ( copy , .Props ) a ;  decl b ;  transfer newResource ( copy , .Props ) b ;  b ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  call globalReturnsTrueOrFalse ( .Exps ) ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_12_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        a |-> 12
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        8 |-> #uninit
+        9 |-> #uninit
+        10 |-> #rs ( copy , .Props )
+        12 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( a )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+      </write>
+      <timer>
+        13
+      </timer>
+      <indexes>
+        #indexes ( 13 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    1
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_12_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_12_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  call globalReturnsTrueOrFalse ( .Exps ) ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  call globalReturnsTrueOrFalse ( .Exps ) ;  @ { transfer newResource ( copy , .Props ) * data1 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_12_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_12_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  call globalReturnsTrueOrFalse ( .Exps ) ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  call globalReturnsTrueOrFalse ( .Exps ) ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      globalReturnsTrueOrFalse
+    </fname> , <funDef>
+      <fname>
+        globalReturnsTrueOrFalse
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { decl a ;  call rand ( .Exps ) ;  transfer newResource ( copy , .Props ) a ;  decl b ;  transfer newResource ( copy , .Props ) b ;  b ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_12_good ( .Exps ) ;  call Data_Race_12_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        #lvDref ( #loc ( 16 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        GLOBAL_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        data1 |-> 16
+        data2 |-> 17
+        share_var |-> 18
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        16 |-> #br ( 20 , 20 , #mutRef ( 18 ) )
+        17 |-> #br ( 21 , 21 , #immRef ( 18 ) )
+        18 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( GLOBAL_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        data1 |-> 16
+        data2 |-> 17
+        share_var |-> 18 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( GLOBAL_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( GLOBAL_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argv1 |-> 3 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( GLOBAL_CONST_FIVE )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 16 , 22 ) )
+        SetItem ( #writev ( 18 , 19 ) )
+      </write>
+      <timer>
+        22
+      </timer>
+      <indexes>
+        #indexes ( 22 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      1
+    </index> , <state>
+      <index>
+        1
+      </index>
+      <k>
+        #borrowMutCK ( 10 , 14 , 14 , 12 ) ~> #freezer#Read0_ ( ) ~> #loc ( 12 ) ~> #freezer#expStmt0_ ( ) ~> * data2 ;  .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_13_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        GLOBAL_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        data1 |-> 10
+        data2 |-> 11
+        share_var |-> 12
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        10 |-> #br ( 14 , 14 , #mutRef ( 12 ) )
+        11 |-> #br ( 15 , 15 , #immRef ( 12 ) )
+        12 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( GLOBAL_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        data1 |-> 10
+        data2 |-> 11
+        share_var |-> 12 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( GLOBAL_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( GLOBAL_CONST_FIVE |-> 0
+        arg1 |-> 2
+        argv1 |-> 3 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( GLOBAL_CONST_FIVE )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+      </write>
+      <timer>
+        16
+      </timer>
+      <indexes>
+        #indexes ( 16 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    2
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_13_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_13_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  GLOBAL_CONST_FIVE ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  GLOBAL_CONST_FIVE ;  @ { transfer newResource ( copy , .Props ) * data1 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_13_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_13_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  GLOBAL_CONST_FIVE ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  GLOBAL_CONST_FIVE ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_13_good ( .Exps ) ;  call Data_Race_13_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        #lvDref ( #loc ( 16 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        data1 |-> 16
+        data2 |-> 17
+        globalFive |-> 0
+        share_var |-> 18
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        16 |-> #br ( 20 , 20 , #mutRef ( 18 ) )
+        17 |-> #br ( 21 , 21 , #immRef ( 18 ) )
+        18 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        data1 |-> 16
+        data2 |-> 17
+        globalFive |-> 0
+        share_var |-> 18 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        globalFive |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 2
+        argv1 |-> 3
+        globalFive |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( globalFive )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 16 , 22 ) )
+        SetItem ( #writev ( 18 , 19 ) )
+      </write>
+      <timer>
+        22
+      </timer>
+      <indexes>
+        #indexes ( 22 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      1
+    </index> , <state>
+      <index>
+        1
+      </index>
+      <k>
+        #borrowMutCK ( 10 , 14 , 14 , 12 ) ~> #freezer#Read0_ ( ) ~> #loc ( 12 ) ~> #freezer#expStmt0_ ( ) ~> * data2 ;  .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_14_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        data1 |-> 10
+        data2 |-> 11
+        globalFive |-> 0
+        share_var |-> 12
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        10 |-> #br ( 14 , 14 , #mutRef ( 12 ) )
+        11 |-> #br ( 15 , 15 , #immRef ( 12 ) )
+        12 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        data1 |-> 10
+        data2 |-> 11
+        globalFive |-> 0
+        share_var |-> 12 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        globalFive |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 2
+        argv1 |-> 3
+        globalFive |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( globalFive )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+      </write>
+      <timer>
+        16
+      </timer>
+      <indexes>
+        #indexes ( 16 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    2
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_14_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_14_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  globalFive ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  globalFive ;  @ { transfer newResource ( copy , .Props ) * data1 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_14_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_14_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  globalFive ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , .Blocks ;  globalFive ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_14_good ( .Exps ) ;  call Data_Race_14_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        #lvDref ( #loc ( 14 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 14
+        data2 |-> 15
+        share_var |-> 16
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        14 |-> #br ( 18 , 18 , #mutRef ( 16 ) )
+        15 |-> #br ( 19 , 19 , #immRef ( 16 ) )
+        16 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 14
+        data2 |-> 15
+        share_var |-> 16 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 20 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+      </write>
+      <timer>
+        20
+      </timer>
+      <indexes>
+        #indexes ( 20 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      1
+    </index> , <state>
+      <index>
+        1
+      </index>
+      <k>
+        #lvDref ( #loc ( 12 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 12
+        data2 |-> 13
+        share_var |-> 14
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        12 |-> #br ( 16 , 16 , #mutRef ( 14 ) )
+        13 |-> #br ( 17 , 17 , #immRef ( 14 ) )
+        14 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 12
+        data2 |-> 13
+        share_var |-> 14 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 18 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+      </write>
+      <timer>
+        18
+      </timer>
+      <indexes>
+        #indexes ( 18 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      2
+    </index> , <state>
+      <index>
+        2
+      </index>
+      <k>
+        #borrowMutCK ( 8 , 12 , 12 , 10 ) ~> #freezer#Read0_ ( ) ~> #loc ( 10 ) ~> #freezer#expStmt0_ ( ) ~> * data2 ;  .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_15_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        8 |-> #br ( 12 , 12 , #mutRef ( 10 ) )
+        9 |-> #br ( 13 , 13 , #immRef ( 10 ) )
+        10 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+      </write>
+      <timer>
+        14
+      </timer>
+      <indexes>
+        #indexes ( 14 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      3
+    </index> , <state>
+      <index>
+        3
+      </index>
+      <k>
+        read ( #loc ( 8 ) ) ~> #freezer#expStmt0_ ( ) ~> * data2 ;  .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> call Data_Race_15_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        8 |-> #uninit
+        9 |-> #uninit
+        10 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 8
+        data2 |-> 9
+        share_var |-> 10 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+      </write>
+      <timer>
+        12
+      </timer>
+      <indexes>
+        #indexes ( 12 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      4
+    </index> , <state>
+      <index>
+        4
+      </index>
+      <k>
+        #lvDref ( #loc ( 14 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 14
+        data2 |-> 15
+        share_var |-> 16
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        14 |-> #uninit
+        15 |-> #uninit
+        16 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 14
+        data2 |-> 15
+        share_var |-> 16 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 18 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+      </write>
+      <timer>
+        18
+      </timer>
+      <indexes>
+        #indexes ( 18 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      5
+    </index> , <state>
+      <index>
+        5
+      </index>
+      <k>
+        .
+      </k>
+      <env>
+        arg1 |-> 0
+        argv1 |-> 1
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+      </write>
+      <timer>
+        20
+      </timer>
+      <indexes>
+        #indexes ( 20 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      6
+    </index> , <state>
+      <index>
+        6
+      </index>
+      <k>
+        .
+      </k>
+      <env>
+        arg1 |-> 0
+        argv1 |-> 1
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+      </write>
+      <timer>
+        18
+      </timer>
+      <indexes>
+        #indexes ( 18 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      7
+    </index> , <state>
+      <index>
+        7
+      </index>
+      <k>
+        #lvDref ( #loc ( 12 ) ) ~> #freezer#Transfer0_ ( #rs ( copy , .Props ) ) ~> #increaseIndex ~> #increaseTimer ~> .Stmts ~> #blockend ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 12
+        data2 |-> 13
+        share_var |-> 14
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+        4 |-> #rs ( copy , .Props )
+        6 |-> #rs ( .Props )
+        12 |-> #uninit
+        13 |-> #uninit
+        14 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6
+        data1 |-> 12
+        data2 |-> 13
+        share_var |-> 14 )
+        ListItem ( share_var )
+        ListItem ( data2 )
+        ListItem ( data1 )
+        ListItem ( arg1 |-> 0
+        argc |-> 4
+        argv1 |-> 1
+        argv |-> 6 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 0
+        argv1 |-> 1 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 16 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+      </write>
+      <timer>
+        16
+      </timer>
+      <indexes>
+        #indexes ( 16 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      8
+    </index> , <state>
+      <index>
+        8
+      </index>
+      <k>
+        .
+      </k>
+      <env>
+        arg1 |-> 0
+        argv1 |-> 1
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+      </write>
+      <timer>
+        18
+      </timer>
+      <indexes>
+        #indexes ( 18 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      9
+    </index> , <state>
+      <index>
+        9
+      </index>
+      <k>
+        .
+      </k>
+      <env>
+        arg1 |-> 0
+        argv1 |-> 1
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+      </write>
+      <timer>
+        16
+      </timer>
+      <indexes>
+        #indexes ( 16 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    10
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_15_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_15_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , { .Stmts } , .Blocks ;  @ { transfer newResource ( copy , .Props ) * data1 ;  .Stmts } , { .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      Data_Race_15_good
+    </fname> , <funDef>
+      <fname>
+        Data_Race_15_good
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  @ { data1 mborrow share_var ;  data2 borrow share_var ;  .Stmts } , { .Stmts } , .Blocks ;  @ { .Stmts } , { * data1 ;  * data2 ;  .Stmts } , .Blocks ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_15_good ( .Exps ) ;  call Data_Race_15_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        .
+      </k>
+      <env>
+        arg1 |-> 0
+        argv1 |-> 1
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        1 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 2 ) )
+        SetItem ( #writev ( 1 , 3 ) )
+        SetItem ( #writev ( 4 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 14 , 16 ) )
+      </write>
+      <timer>
+        17
+      </timer>
+      <indexes>
+        #indexes ( 17 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    1
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      Data_Race_18_bad
+    </fname> , <funDef>
+      <fname>
+        Data_Race_18_bad
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl data1 ;  decl data2 ;  decl share_var ;  transfer newResource ( copy , .Props ) share_var ;  data1 borrow share_var ;  data2 borrow share_var ;  call assign_value ( data1 , .Exps ) ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      assign_value
+    </fname> , <funDef>
+      <fname>
+        assign_value
+      </fname>
+      <fparams>
+        data : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { transfer newResource ( copy , .Props ) * data ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { call Data_Race_18_bad ( .Exps ) ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
+
+
+real	0m13.352s
+user	0m10.558s
+sys	0m4.605s
+
+real	0m19.813s
+user	0m11.503s
+sys	0m4.954s
+
+real	0m20.586s
+user	0m11.830s
+sys	0m5.093s
+
+real	0m26.306s
+user	0m12.309s
+sys	0m5.561s
+
+real	0m24.890s
+user	0m12.387s
+sys	0m5.428s
+
+real	0m21.468s
+user	0m11.456s
+sys	0m4.987s
+
+real	0m13.625s
+user	0m10.782s
+sys	0m4.536s
+
+real	0m19.186s
+user	0m11.859s
+sys	0m4.877s
+
+real	0m21.848s
+user	0m11.935s
+sys	0m5.039s
+
+real	0m23.433s
+user	0m12.323s
+sys	0m5.086s
+
+real	0m18.846s
+user	0m12.253s
+sys	0m4.952s
+
+real	0m15.616s
+user	0m10.913s
+sys	0m4.838s
+
+real	0m23.493s
+user	0m12.385s
+sys	0m5.395s
+
+real	0m20.417s
+user	0m11.769s
+sys	0m4.908s
+
+real	0m40.325s
+user	0m14.713s
+sys	0m6.029s
+
+real	0m12.501s
+user	0m10.794s
+sys	0m4.584s
+
+real	5m35.822s
+user	3m9.772s
+sys	1m20.888s

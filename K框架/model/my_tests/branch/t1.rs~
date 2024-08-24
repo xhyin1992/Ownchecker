@@ -1,0 +1,7 @@
+
+decl x;
+decl y;
+decl z;
+
+
+@ { {} }

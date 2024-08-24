@@ -1,0 +1,676 @@
+decl selinux_enabled; transfer newResource(copy) selinux_enabled;
+decl use_default_selinux_context; transfer newResource(copy) use_default_selinux_context;
+decl owner_name;
+decl owner_id;
+decl group_name;
+decl group_id;
+decl mode; transfer newResource(copy) mode; 
+decl dir_mode; transfer newResource(copy) dir_mode; 
+decl dir_mode_bits; transfer newResource(copy) dir_mode_bits;
+decl copy_only_if_needed;
+decl strip_files;
+decl dir_arg;
+decl strip_program; transfer newResource(copy) strip_program;
+decl errno;
+
+fn have_same_content(a_fd:#own(copy), b_fd:#own(copy)) -> #own(copy){
+  
+  decl a_buff; transfer newResource(copy) a_buff;
+  decl b_buff; transfer newResource(copy) b_buff;
+  decl sizet; 
+  a_fd; a_buff; a_buff; 
+  transfer newResource(copy) sizet;
+  sizet; !{
+    sizet; b_fd; b_buff; b_buff; @{
+       val(newResource(copy))
+    };
+    a_buff; b_buff; sizet; @{
+       val(newResource(copy))
+    };
+  };
+  sizet; val(newResource(copy))    // return value
+};
+
+fn extra_mode(input:#own(copy)) -> #own(copy){
+  decl mask; transfer newResource(copy) mask;
+  input; mask; val(newResource(copy))     // return value
+};
+
+fn need_copy(src_name:#own(), dest_name:#own(), x:#own()) -> #own(copy){
+  decl src_sb; 
+  decl dest_sb;
+  decl src_fd;
+  decl dest_fd;
+  decl content_match;
+
+  mode; @{   //if statement
+    val(newResource(copy))
+  };
+
+  src_name; src_sb; @{   //if statement
+    val(newResource(copy))
+  };
+  
+  dest_name; dest_sb; @{   //if statement
+    val(newResource(copy))
+  };
+  
+  src_sb; dest_sb; src_sb; dest_sb; @{   //if statement
+    val(newResource(copy))
+  };
+  
+  src_sb; dest_sb; dest_sb; @{   //if statement
+    val(newResource(copy))
+  };
+
+  owner_id; @{   //if statement
+      transfer newResource(copy) errno;
+      decl ruid; transfer newResource(copy) ruid;
+      ruid; errno; dest_sb; @{
+          val(newResource(copy))
+        }, {
+          val(newResource(copy))
+       };
+   };
+  
+group_id; @{   //if statement
+      transfer newResource(copy) errno;
+      decl rgid; transfer newResource(copy) rgid;
+      rgid; errno; dest_sb; @{
+         val(newResource(copy))
+        }, {
+         val(newResource(copy))
+   };
+  };
+ 
+  selinux_enabled; x; @{   //if statement
+      decl file_scontext; transfer #uninit file_scontext;
+      decl to_scontext; transfer #uninit to_scontext;
+      decl scontext_match;
+
+      src_name; file_scontext; @{
+        val(newResource(copy))
+      };
+
+      dest_name; to_scontext; @ {
+          file_scontext;
+          val(newResource(copy))
+      };
+
+      file_scontext; to_scontext; 
+      transfer newResource(copy) scontext_match;
+
+      file_scontext;
+      to_scontext;
+      scontext_match; @{
+        val(newResource(copy))
+      };
+    };
+
+  src_name;
+  transfer newResource(copy) src_fd;
+  src_fd; @{   //if statement
+    val(newResource(copy))
+  };
+
+  dest_name;
+  transfer newResource(copy) dest_fd;
+  dest_fd; @{   //if statement
+      src_fd;
+      val(newResource(copy))
+    };
+  
+  src_fd; dest_fd; 
+  transfer newResource(copy) content_match;
+
+  src_fd;
+  dest_fd;
+  val(newResource(copy))
+};
+
+fn cp_option_init(y:#own()) -> #voidTy{
+  y;
+  transfer newResource(copy) y;
+};
+
+
+fn setdefaultfilecon(file:#own()) -> #voidTy{
+  decl st;
+  decl scontext; transfer #uninit scontext;
+  decl first_call; transfer newResource(copy) first_call;
+  selinux_enabled; @{
+   val(newResource(copy))
+  };
+  file; st; @{
+   val(newResource(copy))
+  };
+  first_call; file; @{
+   decl p0;
+   file; decl p; transfer newResource() p;
+   *p; !{
+   p; transfer newResource() p;
+   };
+   p; transfer newResource() p0;
+   *p; @{
+     decl prefix;
+     *p; !{
+      p; transfer newResource() p;
+     };
+     transfer newResource() prefix;
+     prefix; @{
+         prefix; p0; p;
+         prefix;
+         deallocate prefix;
+         deallocate prefix;
+       };
+   };
+   };
+ transfer newResource(copy) first_call;
+ file; st; context; scontext;@{
+  scontext;@{
+   scontext;
+  };
+  val(newResource(copy))
+ };
+ file; scontext; errno; @{
+   scontext;
+ };
+ val(newResource(copy))
+};
+
+fn setdefaultfilecon(file:#own()) -> #voidTy{
+  file;
+};
+
+fn target_directory_operand(file:#own()) -> #own(copy){
+  decl b; 
+  file; transfer newResource() b;
+  decl blen; 
+  b; transfer newResource(copy) b;
+  decl looks_like_a_dir;
+  transfer newResource(copy) looks_like_a_dir;
+  decl st;
+  decl err; transfer newResource(copy) err;
+  decl is_a_dir; transfer newResource(copy) is_a_dir;
+  err; @{   //if statement
+    err; file;
+    };
+  is_a_dir; looks_like_a_dir; @{   //if statement
+    err; file;
+         };
+  val(newResource(copy))
+};
+
+fn announce_mkdir(dir:#own(), options:#own()) -> #voidTy{
+  decl x; transfer newResource() x;
+  x; @{   //if statement
+    dir;
+    };
+};
+
+fn make_ancestor(dir:#own(), component:#own(), options:#own()) -> #own(copy){
+  decl x; transfer newResource() x;
+  x; errno; @{   //if statement
+    errno; dir;
+  };
+  decl r; transfer newResource(copy) r;
+  r; @{   //if statement
+    call announce_mkdir(dir, options);
+    };
+  r; val(newResource(copy))     // return value
+};
+
+fn process_dir(dir:#own(), wd:#own(), options:#own()) -> #own(copy){
+  decl x; transfer newResource() x;
+
+  decl ret; transfer newResource(copy) ret;
+
+  ret; x; @{   //if statement
+      dir; errno; @{
+        errno; dir;
+               };
+    };
+
+  ret; val(newResource(copy))     // return value
+};
+
+fn copy_file(from:#own(), to:#own(), x:#own()) -> #own(copy){
+  decl copy_into_self;
+
+  copy_only_if_needed; from; to; x; @{   //if statement
+    val(newResource(copy))     // return value
+  };
+  from; to; x; copy_into_self;
+  val(newResource(copy))     // return value
+};
+
+fn change_attributes(name:#own()) -> #own(copy){
+  decl ok; transfer newResource(copy) ok;
+  owner_id; group_id; name;@{   //if statement
+    error; name;
+    } , {
+    error; name;
+    } , {
+    transfer newResource(copy) ok;
+    };
+
+  use_default_selinux_context; @{   //if statement
+    call setdefaultfilecon(name);
+    };
+
+  val(newResource(copy))     // return value
+};
+
+fn change_timestamps(src_sb:#own(), dest:#own()) -> #own(copy){
+  decl timespec;
+  transfer newResource(copy) timespec;
+  transfer newResource(copy) timespec;
+
+  dest; timespec; @{   //if statement
+      error; dest;
+      val(newResource(copy))     // return value
+    };
+  val(newResource(copy))     // return value
+};
+
+fn strip(name:#own()) -> #own(copy){
+  decl status;
+  decl ok; transfer newResource(copy) ok;
+  decl pid; transfer newResource(copy) pid;
+
+  
+    pid; @{
+   //switch case statement      
+       errno;
+ 
+      }
+    ,{		
+      strip_program; strip_program; name;
+      errno;
+      pid; @{
+        errno;
+      },{
+     
+      },{
+         transfer newResource(copy) ok;
+      };
+      }
+    ,{			
+      pid; @{
+        errno;
+      
+      },{
+      
+      },{
+         transfer newResource(copy) ok;
+      };
+      
+      };
+    
+  val(newResource(copy))     // return value
+};
+
+fn get_ids() -> #voidTy{
+  decl pw;
+  decl gr;
+
+  owner_name; @{   //if statement
+      owner_name; transfer newResource() pw;
+      pw;@{
+          decl tmp; transfer newResource(copy) tmp;
+          owner_name; tmp; @{
+            owner_name;
+                 };
+          transfer tmp owner_id;
+        },
+       {
+        transfer pw owner_id;
+        };
+   
+    }, {
+    transfer newResource(copy) owner_id;
+    };
+
+  group_name; @{   //if statement
+      group_name; transfer newResource() gr;
+      gr;@{
+          decl tmp; transfer newResource(copy) tmp;
+          group_name; tmp;@{
+            group_name;
+                 };
+          transfer tmp group_id;
+        },
+         {
+        transfer gr group_id;
+        };
+    }
+   , {
+    transfer newResource(copy) group_id;
+    };
+};
+
+fn usage(status:#own(copy)) -> #voidTy{
+  status; @{   //if statement
+ 
+    } ,{
+    
+    };
+    status;
+ };
+ 
+ fn install_file_in_file(from:#own(), to:#own(), x:#own()) -> #own(copy){
+  decl from_sb; transfer newResource(copy) sb;
+  x; from; from_sb; @{   //if statement
+      errno; from;
+      val(newResource(copy))     // return value
+    };
+  from; to; x; @{   //if statement
+    val(newResource(copy))     // return value
+    };
+  strip_files; @{   //if statement
+    to; @{
+        to; @{
+          errno; to;
+          };
+        val(newResource(copy))     // return value
+      };
+    };
+  x; strip_files; to; @{   //if statement
+    val(newResource(copy))     // return value
+    };
+  call change_attributes (to);
+  val(newResource(copy))     // return value
+};
+ 
+fn mkancesdirs_safe_wd(from:#own(), to:#own(), x:#own(), save_always:#own(copy)) -> #own(copy){
+  decl save_working_directory; transfer newResource(copy) save_working_directory;
+  decl status; transfer newResource(copy) status;
+
+  decl wd;
+  transfer newResource(copy) wd;
+  save_working_directory; @{   //if statement
+    wd;
+    };
+
+  to; wd; @{   //if statement
+      errno; to;
+      transfer newResource(copy) status;
+    };
+
+  save_working_directory; @{   //if statement
+      decl restore_result; transfer newResource(copy) restore_result;
+      decl restore_errno; transfer errno restore_errno;
+      wd;
+      restore_result; @{
+        val(newResource(copy))     // return value
+        };
+      restore_result; status; @{
+          errno; to;
+          val(newResource(copy))     // return value
+        };
+    };
+  status; val(newResource(copy))     // return value
+};
+
+fn install_file_in_file_parents(from:#own(), to:#own(), x:#own()) -> #own(copy){
+  from; to; x; val(newResource(copy))     // return value
+};
+
+fn install_file_in_dir(from:#own(), to_dir:#own(), x:#own(), mkdir_and_install:#own(copy)) -> #own(copy){
+  decl from_base; transfer newResource() from_base;
+  decl to; transfer newResource() to;
+  decl ret; transfer newResource(copy) ret;
+
+  from; to; x; @{   //if statement
+    transfer newResource(copy) ret;
+    };
+
+  call install_file_in_file(from, to, x); transfer newResource(copy) ret;
+  deallocate to;      // free function
+  ret; val(newResource(copy))     // return value
+};
+
+fn main(argc:#own(copy), argv:#own()) -> #own(copy){
+  decl optc;
+  decl exit_status; transfer newResource(copy) exit_status;
+  decl specified_mode; transfer #uninit specified_mode;
+  decl make_backups; transfer newResource(copy) make_backups;
+  decl backup_suffix; transfer #uninit backup_suffix;
+  decl version_control_string; transfer #uninit version_control_string;
+  decl mkdir_and_install; transfer newResource(copy) mkdir_and_install;
+  decl x; transfer newResource(copy) x;
+  decl target_directory; transfer #uninit target_directory;
+  decl no_target_directory; transfer newResource(copy) no_target_directory;
+  decl n_files;
+  decl file; transfer newResource() file;
+  decl strip_program_specified; transfer newResource(copy) strip_program_specified;
+  decl scontext; transfer #uninit scontext;
+ 
+  transfer newResource(copy) selinux_enabled;
+
+  argc; argv;
+  argv;
+  call cp_option_init (x);
+
+  transfer #uninit owner_name;
+  transfer #uninit group_name;
+  transfer newResource(copy) strip_files;
+  transfer newResource(copy) dir_arg;
+  
+argc; argv; transfer newResource(copy) optc; !{   //while statement
+      
+        optc;
+        @{
+   //switch case statement          
+        transfer newResource(copy) make_backups;
+          optarg; transfer newResource(copy) optarg;
+          @{
+            transfer optarg version_control_string;
+            };
+          }
+        ,{
+          
+          }
+        ,{
+          transfer newResource(copy) copy_only_if_needed;
+          
+          }
+        ,{
+          transfer newResource(copy) strip_files;
+          
+          }
+        ,{
+          transfer newResource(copy) strip_program;
+          transfer newResource(copy) strip_program_specified;
+          
+          }
+        ,{
+          transfer newResource(copy) dir_arg;
+          
+          }
+        ,{
+          transfer newResource(copy) mkdir_and_install;
+          
+          }
+        ,{
+          transfer newResource(copy) x;
+          
+          }
+        ,{
+          transfer optarg group_name;
+          
+          }
+        ,{
+          transfer optarg specified_mode;
+          
+          }
+        ,{
+          transfer optarg owner_name;
+          
+          }
+        ,{
+          transfer newResource(copy) x;
+          
+          }
+        ,{
+          transfer newResource(copy) make_backups;
+          transfer optarg backup_suffix;
+          
+          }
+        ,{
+          target_directory; @{
+           
+           };
+          transfer optarg target_directory;
+          
+          }
+        ,{
+          transfer newResource(copy) no_target_directory;
+          
+          }
+        ,{
+          selinux_enabled; @{   //if statement
+              
+            };
+          transfer newResource(copy) x;
+          transfer newResource(copy) use_default_selinux_context;
+          
+          }
+        ,{
+          selinux_enabled; @{   //if statement
+              transfer newResource(copy) use_default_selinux_context;
+
+              optarg; @{
+                transfer optarg scontext;
+                },{
+                transfer newResource(copy) x;
+                };
+            }, {
+              
+            }; 
+          }
+        ,{
+          call usage (newResource(copy));
+          };
+        
+    };
+    
+  dir_arg; strip_files;@{   //if statement
+
+         };
+  dir_arg; target_directory;@{   //if statement
+
+         };
+
+  target_directory; @{   //if statement
+      decl st; 
+      decl stat_success; transfer newResource(copy) stat_success;
+      mkdir_and_install; stat_success; @{
+                 errno; target_directory;
+             };
+      stat_success; @{
+        target_directory;
+             };
+    };
+    
+  transfer newResource(copy) x;
+  backup_suffix; 
+
+  x; scontext; @{   //if statement
+  
+         };
+
+  scontext; @{   //if statement
+    scontext;
+         };
+
+  argc; transfer newResource(copy) n_files;
+  argv; transfer newResource(copy) file;
+
+  n_files; dir_arg; target_directory; @{   //if statement
+      n_files; @{
+        
+        }, {
+        
+               };
+      call usage (newResource(copy));
+    };
+
+  no_target_directory; @{   //if statement
+      target_directory; @{
+       
+               };
+      n_files; @{
+ 
+          call usage (newResource(copy));
+        };
+    },{
+    
+      n_files; call target_directory_operand(file); @{
+      transfer newResource() target_directory;
+      },{
+      
+      };
+    };
+    
+  specified_mode; @{   //if statement
+      decl change; transfer newResource() change;
+      change; @{
+        specified_mode;
+        
+      };
+      transfer newResource(copy) mode;
+      transfer newResource(copy) dir_mode;
+      deallocate change;      // free function
+    };
+
+  strip_program_specified; strip_files; @{   //if statement
+    
+                   };
+
+  copy_only_if_needed; x; @{   //if statement
+      
+      call usage (newResource(copy));
+    };
+
+  copy_only_if_needed; strip_files; @{   //if statement
+      
+      call usage (newResource(copy));
+    };
+
+  copy_only_if_needed; call extra_mode (mode); @{   //if statement
+    
+    };
+  call get_ids ();
+
+  dir_arg; @{   //if statement
+    transfer newResource(copy) exit_status;
+    } , {
+     
+
+      target_directory; @ {
+          call install_file_in_file_parents(file, file, x);  //调用此函数会引发double-free
+          transfer newResource(copy) mkdir_and_install; @{
+            transfer newResource(copy) exit_status;
+            };
+        },{
+          decl i;
+          x;
+          transfer newResource(copy) i;
+          !{
+            call install_file_in_dir(file, target_directory, x); i; mkdir_and_install; @{
+              transfer newResource(copy) exit_status;
+              };
+            };
+        };
+    };
+  exit_status; val(newResource(copy))     // return value
+};
+
+decl arg1;
+decl argv1;
+ 
+transfer newResource(copy) arg1;
+transfer newResource() argv1;
+ 
+call main(arg1, argv1);

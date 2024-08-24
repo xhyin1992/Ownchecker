@@ -1,0 +1,68 @@
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        read ( #loc ( 3 ) ) ~> #freezer#expStmt0_ ( ) ~> .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        a |-> 1
+        b |-> 2
+        c |-> 3
+        i |-> 0
+      </env>
+      <store>
+        0 |-> #uninit
+        1 |-> #uninit
+        2 |-> #uninit
+        3 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( c )
+        ListItem ( a |-> 1
+        b |-> 2
+        i |-> 0 )
+        ListItem ( b )
+        ListItem ( a )
+        ListItem ( i )
+      </stack>
+      <write>
+        .Set
+      </write>
+      <timer>
+        4
+      </timer>
+      <indexes>
+        #indexes ( 4 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    1
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      fun
+    </fname> , <funDef>
+      <fname>
+        fun
+      </fname>
+      <fparams>
+        .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl c ;  c ;  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>

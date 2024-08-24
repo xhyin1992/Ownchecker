@@ -1,0 +1,1087 @@
+<T>
+  <states>
+    StateCellMapItem ( <index>
+      0
+    </index> , <state>
+      <index>
+        0
+      </index>
+      <k>
+        .
+      </k>
+      <env>
+        arg1 |-> 2
+        argv1 |-> 3
+        optind |-> 0
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( optind )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+      </write>
+      <timer>
+        10
+      </timer>
+      <indexes>
+        #indexes ( 10 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      1
+    </index> , <state>
+      <index>
+        1
+      </index>
+      <k>
+        #Deallocate ( #loc ( 22 ) ) ~> deallocate u ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> deallocate utmp_buf ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        c |-> 42
+        filename |-> 10
+        i |-> 45
+        n |-> 18
+        n_entries |-> 24
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        this |-> 20
+        u |-> 22
+        utmp_buf |-> 16
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        10 |-> #rs ( .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #uninit
+        18 |-> #rs ( copy , .Props )
+        20 |-> #rs ( .Props )
+        22 |-> #uninit
+        24 |-> #rs ( copy , .Props )
+        40 |-> #rs ( copy , .Props )
+        42 |-> #rs ( copy , .Props )
+        45 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( i )
+        ListItem ( c )
+        ListItem ( i )
+        ListItem ( n_entries )
+        ListItem ( u )
+        ListItem ( this )
+        ListItem ( n )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        filename |-> 10
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        utmp_buf |-> 16 )
+        ListItem ( utmp_buf )
+        ListItem ( n_users )
+        ListItem ( options )
+        ListItem ( filename )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 2
+        argv1 |-> 3
+        optind |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( optind )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 19 ) )
+        SetItem ( #writev ( 18 , 31 ) )
+        SetItem ( #writev ( 20 , 21 ) )
+        SetItem ( #writev ( 20 , 30 ) )
+        SetItem ( #writev ( 22 , 23 ) )
+        SetItem ( #writev ( 22 , 28 ) )
+        SetItem ( #writev ( 24 , 25 ) )
+        SetItem ( #writev ( 24 , 29 ) )
+        SetItem ( #writev ( 26 , 27 ) )
+        SetItem ( #writev ( 32 , 33 ) )
+        SetItem ( #writev ( 34 , 35 ) )
+        SetItem ( #writev ( 40 , 41 ) )
+        SetItem ( #writev ( 40 , 44 ) )
+        SetItem ( #writev ( 42 , 43 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 45 , 47 ) )
+      </write>
+      <timer>
+        48
+      </timer>
+      <indexes>
+        #indexes ( 48 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      2
+    </index> , <state>
+      <index>
+        2
+      </index>
+      <k>
+        .
+      </k>
+      <env>
+        arg1 |-> 2
+        argv1 |-> 3
+        optind |-> 0
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+      </store>
+      <stack>
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( optind )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+      </write>
+      <timer>
+        10
+      </timer>
+      <indexes>
+        #indexes ( 10 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      3
+    </index> , <state>
+      <index>
+        3
+      </index>
+      <k>
+        #Deallocate ( #loc ( 22 ) ) ~> deallocate u ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> deallocate utmp_buf ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        c |-> 42
+        filename |-> 10
+        i |-> 45
+        n |-> 18
+        n_entries |-> 24
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        this |-> 20
+        u |-> 22
+        utmp_buf |-> 16
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        10 |-> #rs ( .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #uninit
+        18 |-> #rs ( copy , .Props )
+        20 |-> #rs ( .Props )
+        22 |-> #uninit
+        24 |-> #rs ( copy , .Props )
+        40 |-> #rs ( copy , .Props )
+        42 |-> #rs ( copy , .Props )
+        45 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( i )
+        ListItem ( c )
+        ListItem ( i )
+        ListItem ( n_entries )
+        ListItem ( u )
+        ListItem ( this )
+        ListItem ( n )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        filename |-> 10
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        utmp_buf |-> 16 )
+        ListItem ( utmp_buf )
+        ListItem ( n_users )
+        ListItem ( options )
+        ListItem ( filename )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 2
+        argv1 |-> 3
+        optind |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( optind )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 19 ) )
+        SetItem ( #writev ( 18 , 31 ) )
+        SetItem ( #writev ( 20 , 21 ) )
+        SetItem ( #writev ( 20 , 30 ) )
+        SetItem ( #writev ( 22 , 23 ) )
+        SetItem ( #writev ( 22 , 28 ) )
+        SetItem ( #writev ( 24 , 25 ) )
+        SetItem ( #writev ( 24 , 29 ) )
+        SetItem ( #writev ( 26 , 27 ) )
+        SetItem ( #writev ( 32 , 33 ) )
+        SetItem ( #writev ( 34 , 35 ) )
+        SetItem ( #writev ( 40 , 41 ) )
+        SetItem ( #writev ( 40 , 44 ) )
+        SetItem ( #writev ( 42 , 43 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 45 , 47 ) )
+      </write>
+      <timer>
+        48
+      </timer>
+      <indexes>
+        #indexes ( 48 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      4
+    </index> , <state>
+      <index>
+        4
+      </index>
+      <k>
+        #Deallocate ( #loc ( 22 ) ) ~> deallocate u ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> deallocate utmp_buf ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        c |-> 38
+        filename |-> 10
+        i |-> 41
+        n |-> 18
+        n_entries |-> 24
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        this |-> 20
+        u |-> 22
+        utmp_buf |-> 16
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        10 |-> #rs ( .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #uninit
+        18 |-> #rs ( copy , .Props )
+        20 |-> #rs ( .Props )
+        22 |-> #uninit
+        24 |-> #rs ( copy , .Props )
+        36 |-> #rs ( copy , .Props )
+        38 |-> #rs ( copy , .Props )
+        41 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( i )
+        ListItem ( c )
+        ListItem ( i )
+        ListItem ( n_entries )
+        ListItem ( u )
+        ListItem ( this )
+        ListItem ( n )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        filename |-> 10
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        utmp_buf |-> 16 )
+        ListItem ( utmp_buf )
+        ListItem ( n_users )
+        ListItem ( options )
+        ListItem ( filename )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 2
+        argv1 |-> 3
+        optind |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( optind )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 19 ) )
+        SetItem ( #writev ( 18 , 27 ) )
+        SetItem ( #writev ( 20 , 21 ) )
+        SetItem ( #writev ( 20 , 26 ) )
+        SetItem ( #writev ( 22 , 23 ) )
+        SetItem ( #writev ( 24 , 25 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 36 , 37 ) )
+        SetItem ( #writev ( 36 , 40 ) )
+        SetItem ( #writev ( 38 , 39 ) )
+        SetItem ( #writev ( 41 , 42 ) )
+        SetItem ( #writev ( 41 , 43 ) )
+      </write>
+      <timer>
+        44
+      </timer>
+      <indexes>
+        #indexes ( 44 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      5
+    </index> , <state>
+      <index>
+        5
+      </index>
+      <k>
+        #Deallocate ( #loc ( 22 ) ) ~> deallocate u ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> deallocate utmp_buf ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        c |-> 42
+        filename |-> 10
+        i |-> 45
+        n |-> 18
+        n_entries |-> 24
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        this |-> 20
+        u |-> 22
+        utmp_buf |-> 16
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        10 |-> #rs ( .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #uninit
+        18 |-> #rs ( copy , .Props )
+        20 |-> #rs ( .Props )
+        22 |-> #uninit
+        24 |-> #rs ( copy , .Props )
+        40 |-> #rs ( copy , .Props )
+        42 |-> #rs ( copy , .Props )
+        45 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( i )
+        ListItem ( c )
+        ListItem ( i )
+        ListItem ( n_entries )
+        ListItem ( u )
+        ListItem ( this )
+        ListItem ( n )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        filename |-> 10
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        utmp_buf |-> 16 )
+        ListItem ( utmp_buf )
+        ListItem ( n_users )
+        ListItem ( options )
+        ListItem ( filename )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 2
+        argv1 |-> 3
+        optind |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( optind )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 19 ) )
+        SetItem ( #writev ( 18 , 31 ) )
+        SetItem ( #writev ( 20 , 21 ) )
+        SetItem ( #writev ( 20 , 30 ) )
+        SetItem ( #writev ( 22 , 23 ) )
+        SetItem ( #writev ( 22 , 28 ) )
+        SetItem ( #writev ( 24 , 25 ) )
+        SetItem ( #writev ( 24 , 29 ) )
+        SetItem ( #writev ( 26 , 27 ) )
+        SetItem ( #writev ( 32 , 33 ) )
+        SetItem ( #writev ( 34 , 35 ) )
+        SetItem ( #writev ( 40 , 41 ) )
+        SetItem ( #writev ( 40 , 44 ) )
+        SetItem ( #writev ( 42 , 43 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 45 , 47 ) )
+      </write>
+      <timer>
+        48
+      </timer>
+      <indexes>
+        #indexes ( 48 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      6
+    </index> , <state>
+      <index>
+        6
+      </index>
+      <k>
+        #Deallocate ( #loc ( 22 ) ) ~> deallocate u ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> deallocate utmp_buf ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        c |-> 38
+        filename |-> 10
+        i |-> 41
+        n |-> 18
+        n_entries |-> 24
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        this |-> 20
+        u |-> 22
+        utmp_buf |-> 16
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        10 |-> #rs ( .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #uninit
+        18 |-> #rs ( copy , .Props )
+        20 |-> #rs ( .Props )
+        22 |-> #uninit
+        24 |-> #rs ( copy , .Props )
+        36 |-> #rs ( copy , .Props )
+        38 |-> #rs ( copy , .Props )
+        41 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( i )
+        ListItem ( c )
+        ListItem ( i )
+        ListItem ( n_entries )
+        ListItem ( u )
+        ListItem ( this )
+        ListItem ( n )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        filename |-> 10
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        utmp_buf |-> 16 )
+        ListItem ( utmp_buf )
+        ListItem ( n_users )
+        ListItem ( options )
+        ListItem ( filename )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 2
+        argv1 |-> 3
+        optind |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( optind )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 19 ) )
+        SetItem ( #writev ( 18 , 27 ) )
+        SetItem ( #writev ( 20 , 21 ) )
+        SetItem ( #writev ( 20 , 26 ) )
+        SetItem ( #writev ( 22 , 23 ) )
+        SetItem ( #writev ( 24 , 25 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 36 , 37 ) )
+        SetItem ( #writev ( 36 , 40 ) )
+        SetItem ( #writev ( 38 , 39 ) )
+        SetItem ( #writev ( 41 , 42 ) )
+        SetItem ( #writev ( 41 , 43 ) )
+      </write>
+      <timer>
+        44
+      </timer>
+      <indexes>
+        #indexes ( 44 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      7
+    </index> , <state>
+      <index>
+        7
+      </index>
+      <k>
+        #Deallocate ( #loc ( 22 ) ) ~> deallocate u ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> deallocate utmp_buf ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        c |-> 42
+        filename |-> 10
+        i |-> 45
+        n |-> 18
+        n_entries |-> 24
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        this |-> 20
+        u |-> 22
+        utmp_buf |-> 16
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        10 |-> #rs ( .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #uninit
+        18 |-> #rs ( copy , .Props )
+        20 |-> #rs ( .Props )
+        22 |-> #uninit
+        24 |-> #rs ( copy , .Props )
+        40 |-> #rs ( copy , .Props )
+        42 |-> #rs ( copy , .Props )
+        45 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( i )
+        ListItem ( c )
+        ListItem ( i )
+        ListItem ( n_entries )
+        ListItem ( u )
+        ListItem ( this )
+        ListItem ( n )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        filename |-> 10
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        utmp_buf |-> 16 )
+        ListItem ( utmp_buf )
+        ListItem ( n_users )
+        ListItem ( options )
+        ListItem ( filename )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 2
+        argv1 |-> 3
+        optind |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( optind )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 19 ) )
+        SetItem ( #writev ( 18 , 31 ) )
+        SetItem ( #writev ( 20 , 21 ) )
+        SetItem ( #writev ( 20 , 30 ) )
+        SetItem ( #writev ( 22 , 23 ) )
+        SetItem ( #writev ( 22 , 28 ) )
+        SetItem ( #writev ( 24 , 25 ) )
+        SetItem ( #writev ( 24 , 29 ) )
+        SetItem ( #writev ( 26 , 27 ) )
+        SetItem ( #writev ( 32 , 33 ) )
+        SetItem ( #writev ( 34 , 35 ) )
+        SetItem ( #writev ( 40 , 41 ) )
+        SetItem ( #writev ( 40 , 44 ) )
+        SetItem ( #writev ( 42 , 43 ) )
+        SetItem ( #writev ( 45 , 46 ) )
+        SetItem ( #writev ( 45 , 47 ) )
+      </write>
+      <timer>
+        48
+      </timer>
+      <indexes>
+        #indexes ( 48 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      8
+    </index> , <state>
+      <index>
+        8
+      </index>
+      <k>
+        #Deallocate ( #loc ( 22 ) ) ~> deallocate u ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> deallocate utmp_buf ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        c |-> 38
+        filename |-> 10
+        i |-> 41
+        n |-> 18
+        n_entries |-> 24
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        this |-> 20
+        u |-> 22
+        utmp_buf |-> 16
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        10 |-> #rs ( .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #uninit
+        18 |-> #rs ( copy , .Props )
+        20 |-> #rs ( .Props )
+        22 |-> #uninit
+        24 |-> #rs ( copy , .Props )
+        36 |-> #rs ( copy , .Props )
+        38 |-> #rs ( copy , .Props )
+        41 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( i )
+        ListItem ( c )
+        ListItem ( i )
+        ListItem ( n_entries )
+        ListItem ( u )
+        ListItem ( this )
+        ListItem ( n )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        filename |-> 10
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        utmp_buf |-> 16 )
+        ListItem ( utmp_buf )
+        ListItem ( n_users )
+        ListItem ( options )
+        ListItem ( filename )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 2
+        argv1 |-> 3
+        optind |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( optind )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 19 ) )
+        SetItem ( #writev ( 18 , 27 ) )
+        SetItem ( #writev ( 20 , 21 ) )
+        SetItem ( #writev ( 20 , 26 ) )
+        SetItem ( #writev ( 22 , 23 ) )
+        SetItem ( #writev ( 24 , 25 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 36 , 37 ) )
+        SetItem ( #writev ( 36 , 40 ) )
+        SetItem ( #writev ( 38 , 39 ) )
+        SetItem ( #writev ( 41 , 42 ) )
+        SetItem ( #writev ( 41 , 43 ) )
+      </write>
+      <timer>
+        44
+      </timer>
+      <indexes>
+        #indexes ( 44 , 0 )
+      </indexes>
+    </state> ) StateCellMapItem ( <index>
+      9
+    </index> , <state>
+      <index>
+        9
+      </index>
+      <k>
+        #Deallocate ( #loc ( 22 ) ) ~> deallocate u ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> deallocate utmp_buf ;  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts ~> #blockend ~> val ( newResource ( copy , .Props ) )  .Stmts ~> #blockend ~> #void ~> #freezer#expStmt0_ ( ) ~> .Stmts
+      </k>
+      <env>
+        arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        c |-> 38
+        filename |-> 10
+        i |-> 41
+        n |-> 18
+        n_entries |-> 24
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        this |-> 20
+        u |-> 22
+        utmp_buf |-> 16
+      </env>
+      <store>
+        0 |-> #rs ( copy , .Props )
+        2 |-> #rs ( copy , .Props )
+        3 |-> #uninit
+        6 |-> #rs ( copy , .Props )
+        8 |-> #rs ( .Props )
+        10 |-> #rs ( .Props )
+        12 |-> #rs ( copy , .Props )
+        14 |-> #rs ( copy , .Props )
+        16 |-> #uninit
+        18 |-> #rs ( copy , .Props )
+        20 |-> #rs ( .Props )
+        22 |-> #uninit
+        24 |-> #rs ( copy , .Props )
+        36 |-> #rs ( copy , .Props )
+        38 |-> #rs ( copy , .Props )
+        41 |-> #rs ( copy , .Props )
+      </store>
+      <stack>
+        ListItem ( i )
+        ListItem ( c )
+        ListItem ( i )
+        ListItem ( n_entries )
+        ListItem ( u )
+        ListItem ( this )
+        ListItem ( n )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        filename |-> 10
+        n_users |-> 14
+        optind |-> 0
+        options |-> 12
+        utmp_buf |-> 16 )
+        ListItem ( utmp_buf )
+        ListItem ( n_users )
+        ListItem ( options )
+        ListItem ( filename )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( arg1 |-> 2
+        argc |-> 6
+        argv1 |-> 3
+        argv |-> 8
+        optind |-> 0 )
+        ListItem ( argv )
+        ListItem ( argc )
+        ListItem ( arg1 |-> 2
+        argv1 |-> 3
+        optind |-> 0 )
+        ListItem ( argv1 )
+        ListItem ( arg1 )
+        ListItem ( optind )
+      </stack>
+      <write>
+        SetItem ( #writev ( 0 , 1 ) )
+        SetItem ( #writev ( 2 , 4 ) )
+        SetItem ( #writev ( 3 , 5 ) )
+        SetItem ( #writev ( 6 , 7 ) )
+        SetItem ( #writev ( 8 , 9 ) )
+        SetItem ( #writev ( 10 , 11 ) )
+        SetItem ( #writev ( 12 , 13 ) )
+        SetItem ( #writev ( 14 , 15 ) )
+        SetItem ( #writev ( 16 , 17 ) )
+        SetItem ( #writev ( 18 , 19 ) )
+        SetItem ( #writev ( 18 , 27 ) )
+        SetItem ( #writev ( 20 , 21 ) )
+        SetItem ( #writev ( 20 , 26 ) )
+        SetItem ( #writev ( 22 , 23 ) )
+        SetItem ( #writev ( 24 , 25 ) )
+        SetItem ( #writev ( 28 , 29 ) )
+        SetItem ( #writev ( 30 , 31 ) )
+        SetItem ( #writev ( 36 , 37 ) )
+        SetItem ( #writev ( 36 , 40 ) )
+        SetItem ( #writev ( 38 , 39 ) )
+        SetItem ( #writev ( 41 , 42 ) )
+        SetItem ( #writev ( 41 , 43 ) )
+      </write>
+      <timer>
+        44
+      </timer>
+      <indexes>
+        #indexes ( 44 , 0 )
+      </indexes>
+    </state> )
+  </states>
+  <nstate>
+    10
+  </nstate>
+  <tmp>
+    .List
+  </tmp>
+  <funDefs>
+    FunDefCellMapItem ( <fname>
+      list_entries_users
+    </fname> , <funDef>
+      <fname>
+        list_entries_users
+      </fname>
+      <fparams>
+        n : #own ( copy , .Props ) , this : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl u ;  transfer newResource ( .Props ) u ;  decl n_entries ;  transfer newResource ( copy , .Props ) n_entries ;  n ;  this ;  @ { decl trimmed_name ;  transfer newResource ( .Props ) trimmed_name ;  transfer trimmed_name u ;  n_entries ;  transfer newResource ( copy , .Props ) n_entries ;  .Stmts } , { .Stmts } , .Blocks ;  this ;  transfer newResource ( .Props ) this ;  n ;  transfer newResource ( copy , .Props ) n ;  u ;  n_entries ;  call userid_compare ( newResource ( .Props ) , newResource ( .Props ) , .Exps ) ;  decl i ;  transfer newResource ( copy , .Props ) i ;  i ;  n_entries ;  decl c ;  i ;  n_entries ;  @ { transfer newResource ( copy , .Props ) c ;  .Stmts } , { transfer newResource ( copy , .Props ) c ;  .Stmts } , .Blocks ;  u ;  c ;  i ;  transfer newResource ( copy , .Props ) i ;  decl i ;  transfer newResource ( copy , .Props ) i ;  i ;  n_entries ;  deallocate u ;  i ;  transfer newResource ( copy , .Props ) i ;  deallocate u ;  deallocate u ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      main
+    </fname> , <funDef>
+      <fname>
+        main
+      </fname>
+      <fparams>
+        argc : #own ( copy , .Props ) , argv : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { argc ;  argv ;  argc ;  optind ;  @ { .Stmts } , { call users ( newResource ( .Props ) , newResource ( copy , .Props ) , .Exps ) ;  .Stmts } , { argv ;  .Stmts } , .Blocks ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      usage
+    </fname> , <funDef>
+      <fname>
+        usage
+      </fname>
+      <fparams>
+        status : #own ( copy , .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { status ;  @ { .Stmts } , { .Stmts } , .Blocks ;  status ;  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      userid_compare
+    </fname> , <funDef>
+      <fname>
+        userid_compare
+      </fname>
+      <fparams>
+        v_a : #own ( .Props ) , v_b : #own ( .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #own ( copy , .Props )
+      </fret>
+      <fbody>
+        { decl a ;  a borrow v_a ;  decl b ;  b borrow v_b ;  * a ;  * b ;  val ( newResource ( copy , .Props ) )  .Stmts }
+      </fbody>
+    </funDef> ) FunDefCellMapItem ( <fname>
+      users
+    </fname> , <funDef>
+      <fname>
+        users
+      </fname>
+      <fparams>
+        filename : #own ( .Props ) , options : #own ( copy , .Props ) , .Parameters
+      </fparams>
+      <fret>
+        #voidTy
+      </fret>
+      <fbody>
+        { decl n_users ;  transfer newResource ( copy , .Props ) n_users ;  decl utmp_buf ;  transfer newResource ( .Props ) utmp_buf ;  @ { filename ;  .Stmts } , { .Stmts } , .Blocks ;  call list_entries_users ( n_users , utmp_buf , .Exps ) ;  deallocate utmp_buf ;  .Stmts }
+      </fbody>
+    </funDef> )
+  </funDefs>
+</T>
